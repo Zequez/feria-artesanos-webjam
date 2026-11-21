@@ -97,6 +97,3 @@
 .bg-emerald-700{background-color:color-mix(in oklab, var(--colors-emerald-700) var(--un-bg-opacity), transparent);}
 .hover\:bg-amber-300:hover{background-color:color-mix(in oklab, var(--colors-amber-300) var(--un-bg-opacity), transparent);}
 }
-@media (min-width: 40rem){
-.sm\:flex-row{flex-direction:row;}
-}
