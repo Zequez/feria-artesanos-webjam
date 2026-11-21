@@ -1,0 +1,44 @@
+// Website de $600mil por año
+:yaml
+  linkMaps: https://www.google.com/maps/place/Feria+Del+Bosque/@-38.0772074,-57.56763,231m/data=!3m1!1e3!4m6!3m5!1s0x9584e0a5d4884d0d:0x47ce549b83a1992a!8m2!3d-38.0771425!4d-57.5670761!16s%2Fg%2F11cjp75w09?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D
+
+body[flex-cc flex-col gap-12 min-h-screen p6 bg-emerald-600]
+  header[flex-cc flex-col gap-6 max-w-screen-sm mx-auto]
+    img[w-63](src="images/feria/md.webp")
+    div[
+
+    ]
+      h1[font-bold font-serif text-11/12 text-center text-shadow-[0_2px_2px_#0006] tracking-3px uppercase text-white]
+        span Feria de
+        br
+        //span Artesanal
+        span Artesanos
+        br
+      div[font-sans text-6/12 text-center text-shadow-[0_2px_2px_#0006] tracking-1px text-white]
+        | Bosque Peralta Ramos
+    
+    div[flex-cc flex-wrap gap-2]
+      mixin Maravillosa
+        span[px4 py1 text-white bg-emerald-700 rounded-2]
+          block
+      +Maravillosa 26 puestos variables
+      +Maravillosa 13 puestos permanentes
+      +Maravillosa Buffet
+      +Maravillosa Baño
+      +Maravillosa Casita y Ludoteca Para Niños
+      +Maravillosa Música, Circo, Teatro en vivo
+      +Maravillosa Mesas y Banquitos
+
+
+    div[flex gap-3]
+      a[h18 w18 bg-amber-200 hover:(bg-amber-300)  text-red-500 rounded-2 icon-fa-location-dot flex-cc text-5rem bg-linear-to-b from-white/5 to-black/5 shadow-[0_2px_2px_#0006] text-shadow-[3px_2px_0] text-shadow-red-800](href=linkMaps, target="_blank")
+      div[flex px3 py3 gap-3 font-mono font-semibold text-3.5/6 text-amber-950 text-shadow-[0_1px_0_#fff6] uppercase bg-amber-400 bg-linear-to-b from-white/10 rounded-3 shadow-[0_2px_2px_#0006] to-black/5]
+        div[flex-cc h-12 w-12 text-5rem icon-fa-calendar-days text-amber-900]
+        div
+          div 3pm a 6pm
+          div Sábados, Domingos y feriados
+  div 
+    div Asociación Civil
+    div Coordinadora ...
+    div Miembros ...
+    div La feria mejor organizada de la ciudad
