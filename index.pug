@@ -35,9 +35,9 @@ mixin MetaCharset
 
 //# Layout
 mixin Layout
-  body[flex flex-col gap-12 min-h-screen p1.5 bg-emerald-800]
-    div[flex flex-col relative gap-4 p6 w-full text-white bg-emerald-600 rounded-2 shadow-[0_0_1px_2px_#0003]]
-      div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b from-white/10]
+  body[flex flex-col gap-12 min-h-screen p1.5 bg-emerald-800 print:bg-black print:text-black]
+    div[flex flex-col relative gap-4 p6 w-full text-white bg-emerald-600 rounded-2 shadow-[0_0_1px_2px_#0003] print:bg-transparent print:shadow-none print:text-black]
+      div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b rounded-t-2.2 from-white/10 print:hidden]
       block
 
 
@@ -54,7 +54,7 @@ mixin OrdinaryHead(favicon, title)
 
 //# Dominios 
 html(name="dominios")
-  +OrdinaryHead
+  +OrdinaryHead('💬', 'Dominios disponibles')
   +Layout
     div Dominios disponibles
     ul[pl-4 list-disc]
@@ -64,16 +64,38 @@ html(name="dominios")
       li feriadeartesanos.net
 
 
+//# QR Mensaje
+html(name="qr-mensaje")
+  +OrdinaryHead
+  body[grid cols-3 w-210mm]
+    mixin Mensaje  
+      div[w-full flex flex-col bg-black/10 p4 b b-black]
+        img[[image-rendering: pixelated] w-full](src="images/qr-mensaje/md.webp")
+        div[mt2 font-mono text-2.7 text-center]
+          span[opacity-50] https://
+          br 
+          span feriabosque.webjam.site/mensaje
+    +Mensaje
+    +Mensaje
+    +Mensaje
+    +Mensaje
+    +Mensaje
+    +Mensaje
+    +Mensaje
+    +Mensaje
+    +Mensaje
+    
+     
 //# Mensaje
 html(name="mensaje")
   +OrdinaryHead('💬', 'Mensaje para amigos de la Feria de Artesanos del Bosque Peralta Ramos')
     style.
       body a {
-        @apply text-emerald-300 underline underline-offset-2 text-shadow-[0_0_3px_#fff7] hover:text-emerald-100 hover:underline-2;
+        @apply text-emerald-300 underline underline-offset-2 text-shadow-[0_0_3px_#fff7] hover:text-emerald-100 hover:underline-2 print:text-shadow-none;  
       }
 
       body h2 {
-        @apply text-4/6 uppercase font-bold underline underline-0.5px underline-offset-4 text-emerald-50 text-shadow-[1px_1px_0_#0003]
+        @apply text-4/6 uppercase font-bold underline underline-0.5px underline-offset-4 text-emerald-50 text-shadow-[1px_1px_0_#0003] print:text-shadow-none print:text-black;
       }
 
       body h2 Num, body h2 .num {
@@ -86,7 +108,7 @@ html(name="mensaje")
 
       body ul li:before {
         content: '● ';
-        @apply text-emerald-700 text-shadow-[0_1px_0_#fff4] mr-2;
+        @apply text-emerald-700 print:text-black text-shadow-[0_1px_0_#fff4] mr-2;
       }
   +Layout
         
@@ -105,7 +127,7 @@ html(name="mensaje")
 
       Mi nombre es [Ezequiel Adrián Schwartzman](https://ezequielschwartzman.org). Mi especialidad es hacer sitios web y sistemas en Internet. Pueden explorar mis trabajos previos en la página linkeada.
 
-      ## <Num>DOS.</Num>Beneficios de una página web propia de la feria
+      ## <span class="num">DOS. </span>Beneficios de una página web propia de la feria
 
       Imaginen que alguien escucha sobre la feria y busca información en Internet, o quieren imprimir fliers con un link para que las personas entren y vean de qué se trata la feria.
 
@@ -144,18 +166,44 @@ html(name="mensaje")
        
       Estuve explorando con el formato de la página web de la feria. La exploración la estoy publicando temporalmente en [feriabosque.webjam.site](https://feriabosque.webjam.site). Un dominio propio no difundio públicamente que utilizo para mostrar y recibir feedback de mis pares. Posterior a la elección del dominio por parte del grupo, se publicaría allí (por ejemplo, [feriadelbosque.ar o feria.delbosque.art o feriadeartesanos.net](dominios)).
 
-      
-      
-      
-      
+      ## <span class="num">OCHO. </span>Base de datos del sistema.
 
-      
+      Para facilitar la introducción de los datos al sistema de la web estaremos utilizando una hoja de cálculos de Google Sheets compartida con la grupalidad donde mantendremos los datos actualizados que luego estarán en la web.
 
-      
-      
+      Quienes quieran agregar datos pueden enviármelos al Whatsapp directamente, o si prefieren participar en la edición de la hoja de cálculos, me pueden compartir su email para que les active el permiso en el sistema.
 
-      
+      <a href="https://docs.google.com/spreadsheets/d/1IRzjG_roWhEoPOQ_dNuHUs8LHmSQt-KhlEDZ1XGG2As/edit?gid=0#gid=0" target="_blank">Link a la hoja de cálculos.</a>
 
+      Los datos iniciales en principio serían:
+
+      - Nombre del proyecto
+      - Contacto o contactos públicos
+      - ¿Qué vendés?
+      - Links a redes sociales y/o página web si tienen
+      - Imagen representativa o logo si tienen
+      - Al menos una fotografia
+
+    div[bg-emerald-700 -mx-6 bg-[url(images/white-noise-20/md.webp)] p6 b-t b-black/20 -mb6 rounded-b-2 shadow-[inset_0_1px_2px_#0003]]
+      div[bg-black/20 rounded-4 p6 b b-black/15 shadow-md] 
+        p[mb2] Gracias por leer hasta acá.
+        p[mb2] Si esta propuesta te despierta interés, te invito a que me contactes con tu feedback. Si en cambio te genera resistencia, también te invito a que me compartas tu sentir.
+        
+        
+        div[text-right mt2]
+          | Contactame al 
+          a[](href="https://wa.me/5492235235568" target="_blank") 2235235568
+
+        div[text-right]
+          | Web personal 
+          a[](href="https://ezequielschwartzman.org" target="_blank") ezequielschwartzman.org
+
+
+        div[text-right mt2]
+          | -Ezequiel
+     
+    div[hidden print:flex-cc]
+      div[text-center mt-4 py2 bg-black/10 rounded-1 px-4] Mensaje disponible en la web: <a href="https://feriabosque.webjam.site/mensaje">feriabosque.webjam.site/mensaje</a>
+      
 
 //# Propuesta
 html(name="propuesta")
@@ -310,7 +358,6 @@ html(name="propuesta")
         **No se trata solamente de tener una página web. Se trata de construir una herramienta común, darle visibilidad a cada proyecto y dejar capacidad instalada en la comunidad para seguir desarrollándola.**
         
         Si les interesa, el primer paso es ponernos de acuerdo como feria, reunir una primera señal de compromiso y empezar a construir esa plaza digital entre todos.
-    
     
 
 //# Index
