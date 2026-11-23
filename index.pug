@@ -35,9 +35,9 @@ mixin MetaCharset
 
 //# Layout
 mixin Layout
-  body[p1.5 bg-emerald-800 gap-12 flex flex-col min-h-screen]
-    div[bg-emerald-600 w-full p6 rounded-2 shadow-[0_0_1px_2px_#0003] relative flex flex-col gap-4 text-white]
-      div[absolute pointer-events-none top-0 inset-x-0 h-100 bg-linear-to-b from-white/10]
+  body[flex flex-col gap-12 min-h-screen p1.5 bg-emerald-800]
+    div[flex flex-col relative gap-4 p6 w-full text-white bg-emerald-600 rounded-2 shadow-[0_0_1px_2px_#0003]]
+      div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b from-white/10]
       block
 
 
@@ -52,11 +52,12 @@ mixin OrdinaryHead(favicon, title)
     block
 
 
-//# Dominios
+//# Dominios 
 html(name="dominios")
   +OrdinaryHead
   +Layout
-    ul
+    div Dominios disponibles
+    ul[pl-4 list-disc]
       li feriabosque.webjam.site (actual)
       li feriadelbosque.ar
       li feria.delbosque.art
@@ -89,11 +90,13 @@ html(name="mensaje")
       }
   +Layout
         
-    p[]
-      span[inline-block icon-fa-book-open text-4.5rem/6 mr2]
-      span[text-9/6 font-serif bg-white/20 px0.5 rounded-1 inline-block text-shadow-[1px_1px_0_#0004]] Q
+    p[
+
+    ]
+      span[inline-block mr2 text-4.5rem/6 icon-fa-book-open]
+      span[inline-block px0.5 font-serif text-9/6 text-shadow-[1px_1px_0_#0004] bg-white/20 rounded-1] Q
       | ueridos amigos de la feria del bosque,
-    div[absolute  top-2 right-4 text-emerald-100 text-3.5/6 text-shadow-[1px_1px_0_#0003]]
+    div[absolute right-4 top-2 text-3.5/6 text-emerald-100 text-shadow-[1px_1px_0_#0003]]
       | #{fecha}
     :markdown
       Les traigo una propuesta que para mi ver es de beneficio mutuo. Como ya hablé con algunos de ustedes, estoy explorando lo que podría ser una página web propia de la feria. 
@@ -137,7 +140,9 @@ html(name="mensaje")
 
       El valor es a pagarse en uno o varios pagos a lo largo del año desde la contratación del servicio. Si se dividiera entre 50 personas serían un pago único de $12.000 a pagar a lo largo del año.
 
-  
+      ## <span class="num">SIETE. </span>Exploración Actual. Dominio.
+      
+      Estuve explorando con el formato de la página web de la feria. La exploración la estoy publicando temporalmente en [feriabosque.webjam.site](https://feriabosque.webjam.site). Un dominio propio no difundio públicamente que utilizo para mostrar y recibir feedback de mis pares. Posterior a la elección del dominio por parte del grupo, se publicaría allí (por ejemplo, [feriadelbosque.ar o feria.delbosque.art o feriadeartesanos.net](dominios)).
 
       
       
@@ -169,9 +174,9 @@ html(name="propuesta")
       }
       
       
-  body[p1.5 bg-emerald-800 gap-12 flex flex-col min-h-screen]
-    div[bg-emerald-600 w-full p6 rounded-2 shadow-[0_0_1px_2px_#0003] relative flex flex-col gap-6 text-white]
-      div[absolute pointer-events-none top-0 inset-x-0 h-100 bg-linear-to-b from-white/10]
+  body[flex flex-col gap-12 min-h-screen p1.5 bg-emerald-800]
+    div[flex flex-col relative gap-6 p6 w-full text-white bg-emerald-600 rounded-2 shadow-[0_0_1px_2px_#0003]]
+      div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b from-white/10]
       h1[text-6] Sitio web de la Feria de Artesanos del Bosque Peralta Ramos
 
       div Hola, mi nombre es <a class="text-sky-300 hover:text-sky-200 underline underline-offset-3" href="https://ezequielschwartzman.org/">Ezequiel Schwartzman</a>. Soy facilitador de sitios web para comunidades.
@@ -321,9 +326,9 @@ html(name="index")
     
   
   body
-    div[p1.5 bg-emerald-800 gap-12 flex-cc flex-col]
-      div[bg-emerald-600 w-full py6 rounded-2 shadow-[0_0_1px_2px_#0003] min-h-screen relative flex flex-col gap-6]
-        div[absolute pointer-events-none top-0 inset-x-0 h-100 bg-linear-to-b from-white/10]
+    div[flex-cc flex-col gap-12 p1.5 bg-emerald-800]
+      div[flex flex-col relative gap-6 min-h-screen py6 w-full bg-emerald-600 rounded-2 shadow-[0_0_1px_2px_#0003]]
+        div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b from-white/10]
         //# HEADER
         header[flex-cc flex-col gap-6 max-w-screen-sm mx-auto px6]
           img[w-63](src="images/feria/md.webp")
@@ -336,7 +341,7 @@ html(name="index")
               br
             div[font-sans text-6/12 text-center text-shadow-[0_2px_2px_#0006] tracking-1px text-white]
               | Bosque Peralta Ramos
-            a[text-center block text-gray-100 tracking-1px text-shadow-[0_1px_1px_#0006]](href="https://www.argentina.gob.ar/justicia/igj/entidades-civiles/asociaciones-civiles" target="_blank")
+            a[block text-center text-gray-100 text-shadow-[0_1px_1px_#0006] tracking-1px](href="https://www.argentina.gob.ar/justicia/igj/entidades-civiles/asociaciones-civiles" target="_blank")
               | &ldquo;
               span[underline underline-dashed underline-offset-4 hover:underline-solid] Asociación Civil
               | &rdquo;
@@ -356,9 +361,9 @@ html(name="index")
       
       
           div[flex gap-3]
-            a[h18 w18 bg-amber-300 hover:(brightness-110)  text-red-500 rounded-6 icon-fa-location-dot flex-cc text-5rem bg-linear-to-b from-white/10 to-black/10 shadow-[0_1px_0_var(--colors-amber-800),0_0_8px_#0004] hover:scale-105 transition-transform duration-200 shadow-amber-800 text-shadow-[3px_2px_0] text-shadow-red-800](href=linkMaps, target="_blank")
-            div[flex px3 py3 gap-3 font-mono font-semibold text-3.5/6 text-amber-950 text-shadow-[0_2px_0_#fff6] uppercase bg-amber-200 bg-linear-to-b from-black/3 rounded-3 shadow-[0_1px_0px] shadow-amber-900 to-white/3]
-              div[flex-cc h-12 w-12 text-5rem icon-fa-calendar-days text-amber-900]
+            a[flex-cc text-5rem text-red-500 text-shadow-[3px_2px_0] text-shadow-red-800 bg-amber-300 bg-linear-to-b from-white/10 h18 icon-fa-location-dot rounded-6 shadow-[0_1px_0_var(--colors-amber-800),0_0_8px_#0004] shadow-amber-800 to-black/10 w18 duration-200 transition-transform hover:(brightness-110) hover:scale-105](href=linkMaps, target="_blank")
+            div[flex gap-3 px3 py3 font-mono font-semibold text-3.5/6 text-amber-950 text-shadow-[0_2px_0_#fff6] uppercase bg-amber-200 bg-linear-to-b from-black/3 rounded-3 shadow-[0_1px_0px] shadow-amber-900 to-white/3]
+              div[flex-cc h-12 w-12 text-5rem text-amber-900 icon-fa-calendar-days]
               div
                 div 3pm a 6pm
                 div Sábados, Domingos y feriados
@@ -366,16 +371,16 @@ html(name="index")
         main[flex flex-col gap-6]
           mixin Categoria(emoji, name)
             div
-              div[text-center text-white text-4.5/12 text-shadow-[0_1px_0_#0007] uppercase tracking-1px font-bold]
-                span[text-1.4em mr-1.5 inline-block translate-y-3px]= emoji
+              div[font-bold text-4.5/12 text-center text-shadow-[0_1px_0_#0007] tracking-1px uppercase text-white]
+                span[inline-block mr-1.5 text-1.4em translate-y-3px]= emoji
                 span[text-1.1em]= name[0]
-                span[font text-0.9em]= name.slice(1)
+                span[text-0.9em font]= name.slice(1)
       
-              div[bg-black/20  wheel-horizontal gap-1.5 py-1.5 from-black/6 overflow-x-auto whitespace-nowrap flex justify-center-safe snap-x snap-proximity flex-wrap]
+              div[flex flex-wrap justify-center-safe gap-1.5 py-1.5 snap-proximity snap-x whitespace-nowrap bg-black/20 from-black/6 overflow-x-auto wheel-horizontal]
                 block
             
           mixin Puesto(name)
-            div[h-24 bg-white rounded-2 aspect-163/100 float-left shadow-[0_1px_1px_#0006] flex-cc snap-start]
+            div[flex-cc h-24 snap-start aspect-163/100 bg-white float-left rounded-2 shadow-[0_1px_1px_#0006]]
               block
           
           +Categoria('⭐️', 'Categoría')
@@ -392,32 +397,32 @@ html(name="index")
              +Puesto Puesto Omega
              +Puesto Puesto Beta
   
-          div[italic text-center text-black/70 text-3 opacity-60 text-shadow-[0_1px_0_#fff4] font-bold] La feria mejor organizada de Mar del Plata
+          div[font-bold italic text-3 text-black/70 text-center text-shadow-[0_1px_0_#fff4] opacity-60] La feria mejor organizada de Mar del Plata
   
       
-    footer[text-3/6 bg-emerald-800 w-full text-white p-6]
+    footer[p-6 w-full text-3/6 text-white bg-emerald-800]
       mixin Cat(name)
         div
           div[text-4/12]=name
           block
-      div[grid cols-2 gap-6]
-        div[w-full flex flex-col gap-6]
+      div[grid gap-6 cols-2]
+        div[flex flex-col gap-6 w-full]
           +Cat('Redes')
             ul[pl-4]
               li
-                a[text-sky-300 underline block](href="https://www.instagram.com/feriadeartesanosdelbosque/" target="_blank") Instagram @feriadeartesanosdelbosque
+                a[block text-sky-300 underline](href="https://www.instagram.com/feriadeartesanosdelbosque/" target="_blank") Instagram @feriadeartesanosdelbosque
               li
-                a[text-sky-300 underline block](href="https://www.facebook.com/p/Feria-Artesanal-del-Bosque-Peralta-Ramos-100064438549694/" target="_blank") Facebook
+                a[block text-sky-300 underline](href="https://www.facebook.com/p/Feria-Artesanal-del-Bosque-Peralta-Ramos-100064438549694/" target="_blank") Facebook
                 
             
           +Cat('Documentos')
             ul[pl-4]
               li
-                a[text-sky-300 underline block] Código de organización
+                a[block text-sky-300 underline] Código de organización
               li
-                a[text-sky-300 underline block] Formulario aplicantes
+                a[block text-sky-300 underline] Formulario aplicantes
         
-        div[w-full flex flex-col gap-6]
+        div[flex flex-col gap-6 w-full]
           +Cat('Contactos')
             ul[pl-4]
               li Coordinadora puestos...
