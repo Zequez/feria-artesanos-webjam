@@ -265,5 +265,4 @@
 }
 @supports (color: color-mix(in lab, red, red)){@media print{
 .print\:text-black{color:color-mix(in oklab, var(--colors-black) var(--un-text-opacity), transparent);}
-.print\:bg-black{background-color:color-mix(in oklab, var(--colors-black) var(--un-bg-opacity), transparent);}
-}}
+.print\:bg-black{background-color:color-mix(in oklab, var(--colors-black) var(
