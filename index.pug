@@ -24,7 +24,6 @@ mixin EmojiFavicon(emoji)
   )  
  
 
-
 mixin MetaViewport
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
@@ -36,7 +35,7 @@ mixin MetaCharset
 
 //# Layout
 mixin Layout
-  body[flex flex-col gap-12 min-h-screen p1.5 bg-emerald-800 print:bg-black print:text-black md:p6 ]
+  body[flex flex-col gap-12 min-h-screen p1.5 bg-emerald-800 print:bg-black print:text-black md:p6  ]
     div[flex flex-col relative gap-4 p6 w-full text-white bg-emerald-600 max-w-screen-md  mx-auto rounded-2 shadow-[0_0_1px_2px_#0003] print:bg-transparent print:shadow-none print:text-black]
       div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b rounded-t-2.2 from-white/10 print:hidden]
       block
