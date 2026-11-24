@@ -39,7 +39,7 @@ mixin Layout
     div[flex flex-col relative gap-4 p6 w-full text-white bg-emerald-600 max-w-screen-md  mx-auto rounded-2 shadow-[0_0_1px_2px_#0003] print:bg-transparent print:shadow-none print:text-black]
       div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b rounded-t-2.2 from-white/10 print:hidden]
       block
-
+ 
 
 //# OrdinaryHead
 mixin OrdinaryHead(favicon, title)
@@ -98,6 +98,11 @@ html(name="mensaje")
         @apply text-4/6 uppercase font-bold underline underline-0.5px underline-offset-4 text-emerald-50 text-shadow-[1px_1px_0_#0003] print:text-shadow-none print:text-black;
       }
 
+
+      body h3 {
+        @apply text-3.5/6 uppercase font-bold underline underline-0.5px underline-offset-4 text-emerald-50 text-shadow-[1px_1px_0_#0003] print:text-shadow-none print:text-black;
+      }
+
       body h2 Num, body h2 .num {
         @apply opacity-50 underline-0 inline-block mr1ch;
       }
@@ -121,12 +126,64 @@ html(name="mensaje")
     div[absolute right-4 top-2 text-3.5/6 text-emerald-100 text-shadow-[1px_1px_0_#0003]]
       | #{fecha}
     :markdown
-      Les traigo una propuesta que para mi ver es de beneficio mutuo. Como ya hablé con algunos de ustedes, estoy explorando lo que podría ser una página web propia de la feria. 
+      Les traigo una propuesta que para mi ver es de beneficio mutuo. Como ya hablé con algunos de ustedes, estoy explorando lo que podría ser un sitio web propio para la feria.
+
+      Para quienes no me conocen, mi nombre es Ezequiel Adrián Schwartzman. Nací en Mar del Plata,  el 14 de Diciembre de 1992 y vivo en el barrio Punta Mogotes en lo que algunos conocen como Casa Nami; Puan 2332.
+
+      Me inicie en el Internet en mi adolescencia y aprendí a programar y publicar sitios web. Me desarrollé profesionalmente en ese ámbito luego terminadas mis obligaciones educativas. Mi sitio web es <a href="https://ezequielschwartzman.org">ezequielschwartzman.org</a> y pueden explorar mi curriculum vitae con mi carrera profesional y otros trabajos personales <a href="https://web7.ezequielschwartzman.org/curriculum-vitae/">acá</a>.
+
+      Me identifico como desarrollador de software libre y casi no puedo evitar publicar todo el código que escribo en Internet para que pueda ser aprovechado sin restricciones.
+
+      Hace tiempo decidí desafiarme a ganar dinero haciendo software libre y vendiendo mi propia cosa. La cosa que vendo es esto que les estoy presentando acá.
+
+      ## El problema con el Internet-Moderno
+
+      Yo habito el Internet desde hace muchos años. En su concepción el Internet fue ideado como un lugar donde la humanidad podria colaborar creativamente, tejiendo redes interconectadas de servicios, arte e información.
+
+      El cambio cultural de colaborar en una escala global fue difícil. Y como es tradicional, encontramos formas de facilitarlo con más tecnología.
+      
+      En principio el Internet no era más que computadoras que podían comunicarse unas con otras a través de cables que iban alrededor del mundo. Lo esencial para crear al Internet moderno ya estaba dado.
+      
+      Mediante el inteligente manejo de la sincronización con mensajes, múltiples pantallas podían estar conectadas simultaneamente en cientos de lugares mostrando la misma información, y a diferencia de la televisión, uno podia modificar esa información y se vería reflejado en todas las otras pantallas.
+
+      Un paso más dio luz a la web, también conocida como WWW (World Wide Web). Alguien inventó un tipo de documento llamado HTML (Hiper Text Markup Language), que cuando era procesado con una computadora, podría generar una imagen visual interactiva que cualquier computadora podría leer.
+
+      El Hiper Texto es un formato caracterizado porque en un texto entero cada declaración parcial puede estar contectada con otro texto entero. De este modo se teje una red de textos enteros conectados unos a otros. Una página web es un texto entero que puede ser conectado a otros.
+
+      ### El problema
+
+      El problema es que las personas que empezaron a lucrar usando el Internet se hicieron tan ricas y poderosas, y sus megacorporaciones tan gigantes e imposibles de ignorar, que pareciera que Instagram o Facebook son sinónimos con Internet, y no lo son. Hay personas que elijen o por cuestiones de fuerza mayor no pueden participar de las redes sociales, el publicar en un sitio web los proyectos de uno, en un lugar neutral y accesible a todos, es para mí, lo más sensato; no solo por su accesibilidad, sino también por la libertad creativa que uno le da por ser un sitio web y no una página en una red social.
+
+      ## ¿Qué quiero yo con la feria?
+      
+      No pretendo frikiarla con mi fascinación con el Internet.
+
+      El punto es el siguiente. A mí me encanta hacer sitios web y publicarlos, y hacer herramientas, y diseñar nuevas formas de interactuar con las computadoras y de conectar las computadoras al mundo real.
+
+      Hice hace poco una herramienta llamada Web Jam para hacer sitios web que contiene todo el conocimiento práctico de como hacer que crear y publicar sitios web sea una actividad lúdica disfrutable (para mí al menos por el momento).
+      
+      Hace tiempo que quiero armar un sitio web para la Feria de Artesanos del Bosque, porque es para mí un organismo social fascinante, y la dimensión digital de la feria es igualmente fascinante de esculpir.
+
+      En principio lo que yo quiero resaltar es la multitud de proyectos y sus personas detrás. Que la gente entre al sitio y pueda ver los proyectos y de qué se tratan; y si están de acuerdo también mostrar los seres humanos detrás de cada proyecto, más allá del nombre del proyecto. Y así linkearlos a sus respectivos canales de comunicación.
+
+      Por ejemplo, si la Feria tuviese lugar en el dominio feria.delbosque.ar, otra persona podría tener nain.delbosque.ar o nainalfajores.ar, y si alguien accediera a feria.delbosque.ar, podría desde ahí ver al proyecto de Nain y entrar a su página, donde habría fotos, precios, links a redes, etc
+
+      La otra podría ser que cada uno pueda modificar feria.delbosque.ar/<nombre> por ejemplo.
+
+      ## ¿Y entonces que propongo?
+
+      A esto voy; yo me quiero dedicar a crear sitios web sostenidos comunitariamente para proyectos. Yo no puedo estar disponible para que me llamen para modificar los sitios web de todas las personas del planeta. Entonces, yo necesito entrenarles para que como comunidad puedan sostener su sitio. Por supuesto que mientras yo esté viviendo en el barrio y participando de la feria voy a ocuparme, pero yo necesito que una vez que yo les dejo el sitio en marcha ustedes puedan seguir sosteniéndolo e incluso alguien tome la antorcha y pueda seguir evolucionándolo.
+
+      Por eso esta transmisión de conocimientos es parte de como quiero trabajar.
+ 
+      Y sin más preámbulos, aquí el acuerdo que les traigo:
+
+      <!--
 
       ## <span class="num">UNO. </span>Quien Soy.
 
       Mi nombre es [Ezequiel Adrián Schwartzman](https://ezequielschwartzman.org). Mi especialidad es hacer sitios web y sistemas en Internet. Pueden explorar mis trabajos previos en la página linkeada.
-
+ 
       ## <span class="num">DOS. </span>Beneficios de una página web propia de la feria
 
       Imaginen que alguien escucha sobre la feria y busca información en Internet, o quieren imprimir fliers con un link para que las personas entren y vean de qué se trata la feria.
@@ -142,35 +199,34 @@ html(name="mensaje")
 
       Cada proyecto se puede presentar con una imagen, nombre, descripción y enlaces a sus propios canales de contacto o ventas. Así difundiendo el sitio de la feria, se difunde también a todos los integrantes en simultáneo.
 
-      ## <span class="num">TRES. </span>Servicio. Armado inicial del sitio.
+      -->
+
+      ## <span class="num">UNO. </span>Servicio. Armado inicial del sitio.
 
       Desde la contratación del servicio y durante un mes, estaré enfocando mi atención en desarrollar el sitio de la feria, compilando y publicando en este toda la información de los integrantes del grupo, refinando el diseño e implementando pedidos del grupo respecto a como quieren que sea el sitio o qué quieren que tenga o haga.
 
-      ## <span class="num">CUATRO. </span>Servicio. Sosten anual del sitio.
-
+      ## <span class="num">DOS. </span>Servicio. Sosten anual del sitio.
 
       Desde la contratación de mi servicio y durante un año, estaré a disposición del grupo como sostenedor del sitio web. Tomaré pedidos de modificaciones y les enseñaré a implementar o llevar al sitio a donde quieran.
 
-      ## <span class="num">CINCO. </span>Transmision de conocimientos.
+      ## <span class="num">TRES. </span>Servicio. Transmision de conocimientos.
 
       A partir de la contratación del servicio, estaré a disposición del grupo para capacitar al menos a una persona a que pueda reemplazarme como sostenedor del sitio web. Me encargaré de que tengan las habilidades básicas de como se registra y configura el dominio, de como se configura el hosting, así como las habilidades básicas en la utilización de [Web Jam](https://webjam.space) (una herramienta propia gratuita, pública y libre de código abierto que utilizo para armar sitios).
       
 
-      ## <span class="num">SEIS. </span>Precio y Pagos.
+      ## <span class="num">CUATRO. </span>Precio y Pagos.
 
       El servicio tiene un valor de $600.000 pagado por única vez, mediante transferencia bancaria, efectivo o trueque por productos de la feria.
 
       El valor es a pagarse en uno o varios pagos a lo largo del año desde la contratación del servicio. Si se dividiera entre 50 personas serían un pago único de $12.000 a pagar a lo largo del año.
 
-      ## <span class="num">SIETE. </span>Exploración Actual. Dominio.
-       
-      Estuve explorando con el formato de la página web de la feria. La exploración la estoy publicando temporalmente en [feriabosque.webjam.site](https://feriabosque.webjam.site). Un dominio propio no difundio públicamente que utilizo para mostrar y recibir feedback de mis pares. Posterior a la elección del dominio por parte del grupo, se publicaría allí (por ejemplo, [feriadelbosque.ar o feria.delbosque.art o feriadeartesanos.net](dominios)).
+      Nota: como no sé la estructura financiera interna del grupo no voy a especular; pero sí puedo ayudar con hojas de cálculo para dividir
 
-      ## <span class="num">OCHO. </span>Base de datos del sistema.
+      ## <span class="num">SEIS. </span>Recopilación de datos.
 
-      Para facilitar la introducción de los datos al sistema de la web estaremos utilizando una hoja de cálculos de Google Sheets compartida con la grupalidad donde mantendremos los datos actualizados que luego estarán en la web.
+      Para facilitar la introducción de los datos al sistema de la web propongo la utilización de una hoja de cálculos de Google Sheets compartida con la grupalidad donde se mantendraían los datos actualizados que luego estarán en la web.
 
-      Quienes quieran agregar datos pueden enviármelos al Whatsapp directamente, o si prefieren participar en la edición de la hoja de cálculos, me pueden compartir su email para que les active el permiso en el sistema.
+      Quienes quieran agregar datos podrían enviármelos al Whatsapp directamente, o si prefieren participar en la edición de la hoja de cálculos, me pueden compartir su email para que les active el permiso en el sistema.
 
       <a href="https://docs.google.com/spreadsheets/d/1IRzjG_roWhEoPOQ_dNuHUs8LHmSQt-KhlEDZ1XGG2As/edit?gid=0#gid=0" target="_blank">Link a la hoja de cálculos.</a>
 
@@ -202,168 +258,25 @@ html(name="mensaje")
 
         div[text-right mt2]
           | -Ezequiel
-     
+
+      div[mt4 text-center]
+        a[](href=".") Volver al inicio
+   
     div[hidden print:flex-cc]
       div[text-center mt-4 py2 bg-black/10 rounded-1 px-4] Mensaje disponible en la web: <a href="https://feriabosque.webjam.site/mensaje">feriabosque.webjam.site/mensaje</a>
       
 
-//# Propuesta
-html(name="propuesta")
-  head
-    +MetaTheme
-    +MetaViewport
-    +MetaCharset
-    +EmojiFavicon('⭐️')
-    
-    meta(name="description" content="Propuesta de participación en sitio web para integrantes de la Feria de Artesanos del Bosque Peralta Ramos")
-    title Propuesta Sitio Web Feria Bosque Peralta Ramos
+//# Index2
+html(name="index")
+  body[bg-emerald-600 text-white font-sans p4]
+    div 24 Noviembre 2026 - Esta no es la página oficial de la Feria de Artesanos del Bosque Peralta Ramos. Es solo un boceto creado por <a href="https://ezequielschwartzman.org">Ezequiel</a> que les está proponiendo crear el sitio web oficial de la feria.
 
-    style.
-      a {
-        
-      }
-      
-      
-  body[flex flex-col gap-12 min-h-screen p1.5 bg-emerald-800]
-    div[flex flex-col relative gap-6 p6 w-full text-white bg-emerald-600 rounded-2 shadow-[0_0_1px_2px_#0003]]
-      div[absolute inset-x-0 top-0 h-100 pointer-events-none bg-linear-to-b from-white/10]
-      h1[text-6] Sitio web de la Feria de Artesanos del Bosque Peralta Ramos
-
-      div Hola, mi nombre es <a class="text-sky-300 hover:text-sky-200 underline underline-offset-3" href="https://ezequielschwartzman.org/">Ezequiel Schwartzman</a>. Soy facilitador de sitios web para comunidades.
-
-      div 
-
-      div Dominios 
-      
-      ul[tracking-1px]
-        li
-          span[opacity-50] https://
-          span feriadelbosque.ar 
-          span[opacity-50] (.net,.lat)
-        li
-          span[opacity-50] https://
-          span feriadeartesanos.ar 
-          spac[opacity-50] (.net,.lat)
-        li
-          span[opacity-50] https://
-          span feria.delbosque.art
-        li
-          span[opacity-50] https://
-          span feriadelbosque.artesanos.cc 
-          span[opacity-50] (.site)
-        
-        li
-          span[opacity-50] https://
-          span delbosque.artesanos.cc 
-          span[opacity-50] (.site)
-        
-        li
-          span[opacity-50] https://
-          span delbosque.feriantes.cc 
-          span[opacity-50] (.site)
-          
-            
-      :markdown
-  
-  
-        # La Feria de Artesanos del Bosque, también en Internet
-        
-        ### Una plaza digital propia para la feria y para cada uno de sus proyectos.
-        
-        Imaginen que alguien escucha hablar de la Feria de Artesanos del Bosque y busca información en Internet.
-        
-        En lugar de tener que encontrar una publicación perdida en las redes sociales, puede entrar al sitio oficial de la feria y encontrar todo en un mismo lugar:
-        
-        - Días y horarios de la feria.
-        - Ubicación y acceso directo a Google Maps.
-        - Un croquis del espacio donde se arma la feria.
-        - Contactos de coordinadores, comisiones y referentes.
-        - Un directorio de los proyectos que forman parte de la comunidad.
-        
-        Y lo más importante: **cada artesano tiene su propio espacio dentro de ese directorio.**
-        
-        Cada proyecto puede presentarse con una imagen, un título, una descripción y enlaces a sus canales de contacto o venta. Así, la feria no solamente se promociona como un conjunto: también ayuda a que cada uno de sus integrantes sea descubierto.
-        
-        ## Un sitio web propio, no otra página en una red social
-        
-        Estoy hablando de un sitio web en un dominio propio.
-
-        El problema con plataformas Instagram o Facebook es que imponen un formato determinado, y a menudo lo que se publica ahí es inaccesible para quien no tenga una cuenta o elija no participar en esas redes sociales.
-
-        Un sitio web en un dominio propio (como podría ser https://feriadelbosque.ar) te permite presentar el proyecto de la forma que quieras: mapas, imágenes, textos, listados, links, información práctica, y todo lo que tenga sentido para ustedes poner ahí.
-
-        El sitio puede ser el punto central Internet para que cualquier persona pueda entrar, conocer la feria y descubrir sus proyectos. Puede incluirse en QRs, fliers, mandarse por Whatsapp, etc.
-        
-        A diferencia de Instagram o Facebook, un sitio web no te impone un formato determinado. Es un espacio que la feria puede organizar y presentar como quiera: con mapas, imágenes, textos, catálogos, enlaces, información práctica y todo aquello que tenga sentido para ustedes.
-
-      
-        
-
-        // Adicionalmente instagram no te permite ver publicaciones sin una cuenta.
-        
-        Además, se puede compartir fácilmente mediante códigos QR, redes sociales, folletos o WhatsApp.
-        
-        Podemos pensarlo como **la plaza virtual de la feria**: un punto de encuentro en Internet al que cualquier persona puede entrar para conocer la feria y descubrir sus proyectos.
-        
-        ## Cada proyecto puede tener también su propio sitio web
-        
-        El directorio de la feria es un primer paso.
-        
-        Cada participante que quiera dar un paso más puede crear su propio sitio web, con su identidad y sus contenidos.
-        
-        Para eso, voy a facilitar una video-guía práctica que enseña cómo crear y publicar un sitio web usando Web Jam, una herramienta de software libre que desarrollo.
-        
-        No hace falta contratar hosting ni depender de una plataforma para mantenerlo publicado. Cada persona puede aprender a construir y gestionar su propio espacio en Internet.
-        
-        No voy a hacerles todos los sitios individuales: voy a darles las herramientas y el conocimiento para que puedan hacerlos ustedes mismos.
-        
-        ## ¿Quién se encarga de mantener el sitio de la feria?
-        
-        Mi trabajo no termina cuando el sitio está publicado.
-        
-        Soy facilitador de sitios web para comunidades. Trabajo con un sistema llamado **Web Jam**, que permite construir sitios web con código abierto, configurable y modificable.
-        
-        Durante el proyecto voy a acompañar a la feria, escuchar propuestas y explorar con ustedes las posibilidades del sitio.
-        
-        También voy a capacitar a una o más personas de la comunidad para que puedan actualizar y gestionar el sitio de manera cotidiana.
-        
-        La idea es que el sitio sea de la feria, que puedan modificarlo y hacerlo crecer, y que no dependan de mí para cada pequeño cambio.
-        
-        El servicio incluye un año de soporte y acompañamiento desde la puesta en línea.
-        
-        ## ¿Cuánto cuesta?
-        
-        El proyecto completo tiene un valor único de **$600.000**.
-        
-        No es un abono mensual ni una suscripción. Es el costo de desarrollar el sitio de la feria, acompañar su puesta en marcha, capacitar a alguien de la comunidad y brindar un año de soporte.
-        
-        Para hacerlo accesible, propongo distribuir ese importe entre los participantes.
-        
-        Por ejemplo, si somos 50 feriantes:
-        
-        **$12.000 por participante.**
-        
-        Cada uno puede realizar su aporte a lo largo de un período de hasta 12 meses. Yo mismo llevo el registro de los aportes y hago el seguimiento individual.
-        
-        No necesitamos reunir todo el dinero para empezar. Con una primera señal de compromiso puedo ponerme en marcha y dedicarle el mes de trabajo a la feria. El proyecto avanza para toda la comunidad, independientemente de quién haya completado su aporte.
-        
-        También existe la posibilidad de que la comisión directiva prefiera cubrir el importe completo.
-        
-        En cualquier caso, el valor total del proyecto es de $600.000.
-        
-        ## ¿Cómo seguimos?
-        
-        Trabajo con una sola feria por mes. Eso me permite concentrar mi atención y mi energía en un único proyecto, acompañar de cerca a sus participantes y conseguir los mejores resultados posibles.
-        
-        La propuesta es que la Feria de Artesanos del Bosque tenga su propio lugar en Internet y que ese lugar crezca con ustedes.
-        
-        **No se trata solamente de tener una página web. Se trata de construir una herramienta común, darle visibilidad a cada proyecto y dejar capacidad instalada en la comunidad para seguir desarrollándola.**
-        
-        Si les interesa, el primer paso es ponernos de acuerdo como feria, reunir una primera señal de compromiso y empezar a construir esa plaza digital entre todos.
-    
+    a[text-emerald-300 underline mt4](href="boceto") Ver boceto 
+    br 
+    a[text-emerald-300 underline mt4](href="mensaje") Ver propuesta 
 
 //# Index
-html(name="index")
+html(name="boceto")
   head
     +MetaTheme
     +MetaViewport
@@ -446,7 +359,7 @@ html(name="index")
              +Puesto Puesto Omega
              +Puesto Puesto Beta
   
-          div[font-bold italic text-3 text-black/70 text-center text-shadow-[0_1px_0_#fff4] opacity-60] La feria mejor organizada de Mar del Plata
+          
   
       
     footer[p-6 w-full text-3/6 text-white bg-emerald-800]
@@ -483,4 +396,5 @@ html(name="index")
                 a[text-sky-300 underline](href="https://ezequielschwartzman.org") Ezequiel
                 | 
                 a[text-sky-300 underline](href="https://wa.me/5492235235568") 2235235568
+      div[ mt4 italic text-center w-full  text-3 text-white/80 text-center text-shadow-[0_1px_0_#0004]] La feria mejor organizada de Mar del Plata
           
